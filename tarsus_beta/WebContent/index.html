@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta charset="ISO-8859-1">
+		<script src="/tarsus_beta/js/jquery.js"></script>
+		<script src="/tarsus_beta/js/angular.js"></script>
+		<script src="/tarsus_beta/js/controller/index.controller.js"></script>
+		<title>Insert title here</title>
+	</head>
+	<body ng-controller="IndexController">
+		<div id="map" style="display:none"></div>
+		<div>
+			teste {{local}}  
+			<ul>
+				<li ng-repeat="r in resultado">
+					{{r.name}}	
+				</li>
+			</ul>
+			
+		</div>
+		
+	</body>
+	
+</html>
