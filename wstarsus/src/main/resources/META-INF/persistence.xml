@@ -7,6 +7,8 @@
 	<persistence-unit name="default">
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
     	
+    	<class>br.com.wstarsus.usuario.Usuario</class>
+    	
     	<properties>
 
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>

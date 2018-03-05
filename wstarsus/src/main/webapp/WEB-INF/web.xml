@@ -16,10 +16,28 @@
 	          <param-name>com.sun.jersey.api.json.POJOMappingFeature</param-name>
 	          <param-value>true</param-value>
 	    </init-param>
+	    <init-param>
+	    	<param-name>com.sun.jersey.spi.container.ContainerResponseFilters</param-name>
+	    	<param-value>br.com.wstarsus.filter.CORSFilter</param-value>
+	    </init-param>
+	    <init-param>
+	          <param-name>com.sun.jersey.api.json.POJOMappingFeature</param-name>
+	          <param-value>true</param-value>
+	    </init-param>
 	    <load-on-startup>1</load-on-startup>
 	</servlet>	
 	<servlet-mapping>
 		<servlet-name>wstarsus</servlet-name>
 		<url-pattern>/ws/*</url-pattern>
 	</servlet-mapping>	 
+	<filter>
+	    <filter-name>jwtFilter</filter-name>
+	    <filter-class>br.com.wstarsus.filter.JWTFilter</filter-class>
+	</filter>
+	
+	<filter-mapping>
+	    <filter-name>jwtFilter</filter-name>
+	    <url-pattern>/api/*</url-pattern>
+	</filter-mapping>
+	
 </web-app>
