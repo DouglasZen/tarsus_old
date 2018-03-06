@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @Entity
@@ -28,6 +29,8 @@ public class Usuario implements Serializable{
 	private String senha;
 	@Column(name="sexo")
 	private String sexo;
+	@Transient
+	private String email;
 	
 	
 	public Integer getCodigo() {
@@ -53,6 +56,12 @@ public class Usuario implements Serializable{
 	}
 	public void setSexo(String sexo) {
 		this.sexo = sexo;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	
 	
