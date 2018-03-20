@@ -1,11 +1,11 @@
 package br.com.wstarsus.place;
 
-import javax.xml.bind.annotation.XmlRootElement;
+import java.io.Serializable;
 
-@XmlRootElement
-public class Places {
+public class Places implements Serializable{
 	private String id;
 	private String name;
+	private String[] types;
 	
 	public String getId() {
 		return id;
@@ -18,6 +18,12 @@ public class Places {
 	}
 	public void setName(String name) {
 		this.name = name;
+	}
+	public String[] getTypes() {
+		return types;
+	}
+	public void setTypes(String[] types) {
+		this.types = types;
 	}
 	
 	

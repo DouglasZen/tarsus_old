@@ -29,7 +29,7 @@ public class Usuario implements Serializable{
 	private String senha;
 	@Column(name="sexo")
 	private String sexo;
-	@Transient
+	@Column(name="email")
 	private String email;
 	
 	

@@ -1,20 +1,15 @@
 package br.com.wstarsus.place;
 
+import java.io.Serializable;
 import java.util.List;
 
 import javax.xml.bind.annotation.XmlRootElement;
-@XmlRootElement
-public class Place {
-	private String html_attributions;
+
+public class Place implements Serializable{
+	
 	private String next_page_token;
 	private List<Places> results;
 	
-	public String getHtml_attributions() {
-		return html_attributions;
-	}
-	public void setHtml_attributions(String html_attributions) {
-		this.html_attributions = html_attributions;
-	}
 	public String getNext_page_token() {
 		return next_page_token;
 	}
